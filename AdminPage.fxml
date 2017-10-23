@@ -11,19 +11,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIComponents.AdminPage">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPageController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="99.0" style="-fx-background-color: #24b590;">
          <children>
-            <Button fx:id="showB" layoutX="34.0" layoutY="205.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="View Room Availability" textFill="#24b590">
+            <Button fx:id="showB" layoutY="186.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="View Room Availability" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
-            <Button fx:id="bookB" layoutX="34.0" layoutY="251.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="Book Rooms" textFill="#24b590">
+            <Button fx:id="bookB" layoutY="223.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="Book Rooms" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="profB" layoutX="34.0" layoutY="149.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="My Profile" textFill="#24b590">
+            <Button fx:id="profB" layoutX="-1.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="My Profile" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
@@ -32,18 +32,18 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="CancelB" layoutX="34.0" layoutY="302.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="Cancel Booked Room" textFill="#24b590">
+            <Button fx:id="CancelB" layoutY="260.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="Cancel Booked Room" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="RequestB" layoutX="34.0" layoutY="357.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="View Student requests" textFill="#24b590">
+            <Button fx:id="RequestB" layoutX="-1.0" layoutY="297.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="View Student requests" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
             
-            <Button fx:id="ManageB" layoutX="34.0" layoutY="412.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="Manage Rooms" textFill="#24b590">
+            <Button fx:id="ManageB" layoutX="-1.0" layoutY="334.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #5b615e; -fx-border-color: #24b590;" text="Manage Rooms" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -145,6 +145,7 @@
                         <Separator layoutX="45.0" layoutY="385.0" prefHeight="17.0" prefWidth="463.0" />
                          <Separator layoutX="51.0" layoutY="78.0" prefHeight="17.0" prefWidth="463.0" />
                   <Separator layoutX="51.0" layoutY="86.0" prefHeight="17.0" prefWidth="463.0" />
+                  
                  <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="161.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../download%20(2)%20(1).png" />
@@ -170,6 +171,11 @@
                   <Label layoutX="236.0" layoutY="229.0" text="abc" />
                   <Label layoutX="233.0" layoutY="270.0" text="2001" />
                   <Label layoutX="234.0" layoutY="311.0" text="MCom from XUZ University" />
+                  <ImageView fitHeight="62.0" fitWidth="545.0" layoutX="-6.0">
+                     <image>
+                        <Image url="@../../2017-10-20.png" />
+                     </image>
+                  </ImageView>
                </children></Pane>
                
            <Pane fx:id="BookPane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
@@ -199,26 +205,6 @@
                   <Separator layoutX="26.0" layoutY="75.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
                   <Separator layoutX="26.0" layoutY="411.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
                </children>
-            </Pane>
-            
-            <Pane fx:id="ShowPane" layoutX="1.0" layoutY="-2.0" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590" visible="false">
-               <children>
-                <ImageView fitHeight="60.0" fitWidth="532.0" layoutX="-1.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@../../2017-10-20.png" />
-                     </image>
-                  </ImageView>
-                  <TableView layoutX="27.0" layoutY="65.0" prefHeight="404.0" prefWidth="478.0" style="-fx-background-color: #5b615e;">
-                    <columns>
-                      <TableColumn prefWidth="95.0" text="Room Number" />
-                      <TableColumn prefWidth="55.0" text="Status" />
-                        <TableColumn prefWidth="219.0" text="Courses Booked For" />
-                    </columns>
-                  </TableView>
-               </children>
-               <effect>
-                  <ColorAdjust />
-               </effect>
             </Pane>
             
             <Pane fx:id="CancelPane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
@@ -278,6 +264,26 @@
                         <Image url="@../../2017-10-20.png" />
                      </image>
                   </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="ShowPane" layoutX="11.0" layoutY="8.0" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590" visible="false">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="53.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../download%20(7).png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox editable="true" layoutX="84.0" layoutY="34.0" prefHeight="30.0" prefWidth="401.0" promptText="Search By Room No." style="-fx-background-color: #ffffff;" />
+                  <TableView layoutX="47.0" layoutY="152.0" prefHeight="312.0" prefWidth="458.0" style="-fx-background-color: #5b615e;">
+                     <columns>
+                        <TableColumn prefWidth="70.0" text="Room No." />
+                        <TableColumn prefWidth="109.0" text="Capacity" />
+                        <TableColumn minWidth="0.0" prefWidth="106.0" text="Avaibility Status" />
+                        <TableColumn minWidth="0.0" prefWidth="172.0" text="Coures Booked For" />
+                     </columns>
+                  </TableView>
+                  <DatePicker layoutX="47.0" layoutY="72.0" prefHeight="30.0" prefWidth="218.0" promptText="Search By Date" />
+                  <TextField layoutX="285.0" layoutY="72.0" prefHeight="30.0" prefWidth="206.0" promptText="Search By Time(hh:mm:ss)" />
                </children>
             </Pane>
          </children></AnchorPane>
