@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
 <?import javafx.scene.web.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.paint.*?>
@@ -10,11 +11,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPage">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIComponents.AdminPage">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="99.0" style="-fx-background-color: #24b590;">
          <children>
-            <Button fx:id="showB" layoutX="34.0" layoutY="205.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="Show Room Bookings" textFill="#24b590">
+            <Button fx:id="showB" layoutX="34.0" layoutY="205.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="169.0" style="-fx-background-color: #5b615e;" text="View Room Availability" textFill="#24b590">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
@@ -67,20 +68,78 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
          
-            <Pane fx:id="ManagePane" prefHeight="490.0" prefWidth="532.0" visible="false" />
+            <Pane fx:id="ManagePane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
+               <children>
+                  <Separator layoutX="219.0" layoutY="242.0" prefHeight="0.0" prefWidth="200.0" visible="false" />
+                  <Separator layoutX="-3.0" layoutY="239.0" prefHeight="10.0" prefWidth="538.0" style="-fx-background-color: #5b615e;" />
+                  <Button layoutX="240.0" layoutY="109.0" mnemonicParsing="false" style="-fx-background-color: #5b615e;" text="View" textFill="#24b590">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="126.0" layoutY="66.0" text="Enter Room Number " />
+                  <TextField layoutX="281.0" layoutY="62.0" />
+                  <Label layoutX="193.0" layoutY="24.0" text="View Room Description">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="164.0" text="Capacity Of Room" />
+                  <Label layoutX="112.0" layoutY="196.0" text="Courses Taught" />
+                  <Label layoutX="292.0" layoutY="164.0" text="100" />
+                  <Label layoutX="292.0" layoutY="196.0" text="Course1, Course 2" />
+                  <Label layoutX="72.0" layoutY="259.0" prefHeight="20.0" prefWidth="124.0" text="Add a New Room">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="267.0" layoutY="249.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="2.0" style="-fx-background-color: #5b615e;" />
+                  <Label layoutX="292.0" layoutY="322.0" text="Enter Room Number" />
+                  <Label layoutX="14.0" layoutY="362.0" text="Enter seating capacity" />
+                  <TextField layoutX="162.0" layoutY="318.0" prefHeight="25.0" prefWidth="82.0" />
+                  <TextField layoutX="162.0" layoutY="358.0" prefHeight="25.0" prefWidth="82.0" />
+                  <Label layoutX="324.0" layoutY="259.0" prefHeight="20.0" prefWidth="155.0" text="Remove existing Room">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="322.0" text="Enter Room Number" />
+                  <TextField layoutX="405.0" layoutY="317.0" prefHeight="25.0" prefWidth="82.0" />
+                  <Button layoutX="347.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #5b615e;" text="Remove Room" textFill="#24b590">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="72.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #5b615e;" text="Add New Room" textFill="#24b590">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+               
             <Pane fx:id="RequestPane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
                <children>
-                  <TableView layoutX="43.0" layoutY="46.0" prefHeight="404.0" prefWidth="450.0" style="-fx-background-color: #5b615e;">
+                  <TableView layoutX="43.0" layoutY="58.0" prefHeight="295.0" prefWidth="450.0" style="-fx-background-color: #5b615e;">
                     <columns>
-                      <TableColumn prefWidth="207.0" text="Purpose Of Booking" />
-                      <TableColumn prefWidth="90.0" text="Room Number" />
-                        <TableColumn prefWidth="151.0" text="Actions" />
+                      <TableColumn prefWidth="83.0" text="Request Id" />
+                      <TableColumn prefWidth="214.0" text="Purpose Of Booking" />
+                        <TableColumn prefWidth="151.0" text="Room Number" />
                     </columns>
                   </TableView>
+                  <Button layoutX="166.0" layoutY="374.0" mnemonicParsing="false" style="-fx-background-color: #5b615e;" text="Accept" textFill="#24b590">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="305.0" layoutY="374.0" mnemonicParsing="false" style="-fx-background-color: #5b615e;" text="Reject" textFill="#24b590">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
             
-            <Pane fx:id="ProfilePane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;">
+            <Pane fx:id="ProfilePane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
                <children>
                	<Separator layoutX="45.0" layoutY="376.0" prefHeight="17.0" prefWidth="463.0" />
                         <Separator layoutX="45.0" layoutY="385.0" prefHeight="17.0" prefWidth="463.0" />
@@ -112,6 +171,7 @@
                   <Label layoutX="233.0" layoutY="270.0" text="2001" />
                   <Label layoutX="234.0" layoutY="311.0" text="MCom from XUZ University" />
                </children></Pane>
+               
            <Pane fx:id="BookPane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
                <children>
                 <ImageView fitHeight="60.0" fitWidth="532.0" layoutX="-1.0" pickOnBounds="true">
@@ -140,6 +200,7 @@
                   <Separator layoutX="26.0" layoutY="411.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
                </children>
             </Pane>
+            
             <Pane fx:id="ShowPane" layoutX="1.0" layoutY="-2.0" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590" visible="false">
                <children>
                 <ImageView fitHeight="60.0" fitWidth="532.0" layoutX="-1.0" pickOnBounds="true">
@@ -159,6 +220,7 @@
                   <ColorAdjust />
                </effect>
             </Pane>
+            
             <Pane fx:id="CancelPane" prefHeight="490.0" prefWidth="532.0" style="-fx-background-color: #24b590;" visible="false">
                <children>
                 <ImageView fitHeight="60.0" fitWidth="532.0" layoutX="-1.0" pickOnBounds="true">
@@ -183,8 +245,8 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="26.0" layoutY="75.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
-                  <Separator layoutX="26.0" layoutY="411.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
+                 <Separator layoutX="26.0" layoutY="75.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
+                 <Separator layoutX="26.0" layoutY="411.0" prefHeight="17.0" prefWidth="478.0" style="-fx-background-color: #5b615e;" />
                </children>
             </Pane>
             <Pane fx:id="ChangePasswordPane" layoutX="-1.0" layoutY="-5.0" prefHeight="504.0" prefWidth="545.0" style="-fx-background-color: #24b590;" visible="false">
@@ -204,7 +266,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="Default" layoutX="-3.0" layoutY="-4.0" prefHeight="504.0" prefWidth="545.0" style="-fx-background-color: #24b590;" visible="false">
+            <Pane fx:id="Default" layoutX="-3.0" layoutY="-4.0" prefHeight="504.0" prefWidth="545.0" style="-fx-background-color: #24b590;">
                <children>
                   <Label layoutX="143.0" layoutY="177.0" prefHeight="17.0" prefWidth="276.0" text="Hi! Admin" textFill="#686464">
                      <font>
